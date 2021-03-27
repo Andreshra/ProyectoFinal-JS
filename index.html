@@ -10,8 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
+    
+    <script defer src="js/objetoCotizador.js"></script>
     <script defer src="js/dom.js"></script>
-    <script defer src="js/app.js"></script>
+    <script defer src="js/objeto.js"></script>
+    <script defer src="js/variables.js"></script>
+    <script defer src="js/valores.js"></script>
+    <script defer src="js/cotizador.js"></script>
 </head>
 <body>
     <!-- Titulo -->
@@ -27,7 +32,7 @@
     <div id="formDatos">
         <div class="input-group mb-3">
             <span class="input-group" id="datosForm">Nombre</span>
-            <input type="text" id="name" class="form-control" placeholder="Ingrese su nombre">
+            <input type="text" id="nombre" class="form-control" placeholder="Ingrese su nombre">
         </div>
         <div class="input-group mb-3">
             <span class="input-group" id="datosForm">Email</span>
@@ -43,62 +48,104 @@
             <tr>
                 <th>Servicio</th>
                 <th>Precio</th>
-                <th>Secciones</th>
             </tr>
         </thead>
         <tbody>
-        <form>
-            <tr>
-                <td>
-                    <div class="form-check"> 
-                        <input class="form-check-input" type="radio" name="servicio" id="radios1" value="option1">
-                        <label class="form-check-label" for="radios1">
-                         Diseño web institucional
-                        </label>
-                    </div>
-                </td>
-                <td>
-                    $1300
-                </td>
-                <td>
-                    <input type="number" placeholder="N. de Secciones" min="1" max="100">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="servicio" id="radios2" value="option2">
-                        <label class="form-check-label" for="radios2">
-                         Diseño web de eCommerce
-                        </label>
-                    </div>
-                </td>
-                <td>
-                    $1500
-                </td>
-                <td>
-                    <input type="number" placeholder="N. de Secciones" min="1" max="100">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="servicio" id="radios3" value="option3">
-                        <label class="form-check-label" for="radios3">
-                         Diseño web de cotizador de productos o servicios
-                        </label>
-                    </div>
-                </td>
-                <td>
-                    $1700
-                </td>
-                <td>
-                    <input type="number" placeholder="N. de Secciones" min="1" max="100">
-                </td>
-            </tr>
+            <form id="formWebs">
+                <tr id="porfolio">
+                    <td>
+                        <div class="form-check"> 
+                            <input class="form-check-input" type="radio" name="servicio" id="radios1" value="option1">
+                            <label class="form-check-label" for="radios1">
+                            Porfolio
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        $2300
+                    </td>
+                </tr>
+                <tr  id="eCommerce">
+                    <td>
+                        <div class="form-check"> 
+                            <input class="form-check-input" type="radio" name="servicio" id="radios2" value="option2">
+                            <label class="form-check-label" for="radios2">
+                                Diseño web de eCommerce
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        $2500
+                    </td>
+                </tr>
+                <tr id="cotizador">
+                    <td>
+                        <div class="form-check"> 
+                            <input class="form-check-input" type="radio" name="servicio" id="radios3" value="option3">
+                            <label class="form-check-label" for="radios3">
+                                Diseño web de cotizador de productos o servicios
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        $2700
+                    </td>
+                </tr>
+                <tr id="corporativo">
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="servicio" id="radios4" value="option4">
+                            <label class="form-check-label" for="radios4">
+                            Diseño web corporativo
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        $3000
+                    </td>
+                </tr>
+                <tr id="institucional">
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="servicio" id="radios5" value="option5">
+                            <label class="form-check-label" for="radios5">
+                            Diseño web de tipo institucional
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        $3300
+                    </td>
+                </tr>
+                <tr id="viajes">
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="servicio" id="radios6" value="option6">
+                            <label class="form-check-label" for="radios6">
+                            Diseño web viajes/turismo
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        $4600
+                    </td>
+                </tr>
             </form>
-            </tbody>
+        </tbody>
    </table>
-   <button type="submit" id="confirmar"  class="btn btn-primary mb-2" onclick="mostrarWeb()">Confirmar</button>
+   <br><br>
+   <div class="form-check form-switch"> 
+        <input class="form-check-input" type="checkbox" id="switchMantenimiento">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Mantenimiento <b>$1890</b></label>
+    </div>
+   <br><br>
+   <input id="nuSeccioes" type="number" placeholder="N. de Secciones" min="1" max="100">
+   <br><br>
+   <button type="submit" id="confirmar"  class="btn btn-primary mb-2" onclick="cotizar()">Confirmar</button>
+   <br><br><br>
+
+   <div id="precioFinal">
+        <h3>Precio total de la Web <b id="totalWeb"> $ 0 </b></h3>
+   </div>
 </body>
 </html>
