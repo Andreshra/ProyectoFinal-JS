@@ -1,32 +1,41 @@
-
-function opcionesWeb(opciones, arrayElementos) {
-  
-    if (arrayElementos.length > 0) {
-        let elementosOption = ""
-            for (let elemento of arrayElementos) {
-                if (elemento.tipo != undefined) {
-                    elementosOption += `<tr>${elemento.tipo}</tr>`
-                } else {
-                    elementosOption += `<td>${elemento.precio}</td>`
-                } 
-            }
-            opciones.innerHTML = elementosOption
-    }
-}
-
-opcionesWeb(formWebs, jsonTiposWeb)
-opcionesWeb(formWebs, jsonTiposWeb)
-opcionesWeb(formWebs, jsonTiposWeb)
-opcionesWeb(formWebs, jsonTiposWeb)
-opcionesWeb(formWebs, jsonTiposWeb)
-opcionesWeb(formWebs, jsonTiposWeb) 
-
-function cotizar() {
+const handleSubmit = e => { 
+    e.preventDefault();
     debugger
-    objResultado = new cotizarWebs(jsonTiposWeb, precioSecciones, numeroSecciones, valorMantenimiento, totalWeb, 
-                                    formWebs.value,  parseInt(nuSecciones.value));  
-}
- 
-confirmar.addEventListener("click", cotizar)
+    const {
+      porfolio,
+      ecommerce,
+      servicios,
+      corporativo,
+      institucional,
+      viajes,                                                   
+      mantenimiento,
+      secciones
+    } = inputValues;  /* esto se llama desestructuracion, se puede hacer con objetos y arrays, 
+                        lo que haces es crear variables con sus valores a partir de las propiedades que tengan. 
+                        De esta manera te evitas hacer por ejemplo: inputValues.porfolio, inputValues.ecommerce, etc... */ 
+  
+    let total = 0;
+  
+    total =
+      (porfolio + ecommerce + servicios + corporativo + institucional + viajes) + (secciones * precioSecciones) + mantenimiento;
 
-let mantenimiento = document.getElementById("switchMantenimiento")
+    totalWeb.innerText = `$ ${total}`; //Muestro el total
+  
+    
+            // COMPRUEBO QUE SE HAYA SELECCIONADO ALGUN SERVICIO
+    if (!servicio1.checked && !servicio2.checked && !servicio3.checked && !servicio4.checked && !servicio5.checked && !servicio6.checked) {
+        alert("Por favor, seleccione un servicio");
+    } else {
+        console.log("Its checked :)")
+            }
+  };
+  
+  //hago un forEach de inputs para que por cada input me haga un evento
+  inputs.forEach(input => {
+    input.addEventListener("input", controlDeInputs);
+  });
+  
+  form.addEventListener("submit", handleSubmit); //evento de submit en el form
+
+  
+  

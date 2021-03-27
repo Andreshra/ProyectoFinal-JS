@@ -34,7 +34,7 @@ nombre.addEventListener("keyup", () => {color(event)})
 email.addEventListener("keyup", () => {color1(event)})
 
 function color (e) {
-    if (e.key == "Enter") {
+    if (e.key == "Enter" ) {
         nombre.style.backgroundColor = "#32FF32"
         console.log("OK :)")
         email.focus()

@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
-    
-    <script defer src="js/objetoCotizador.js"></script>
+    <!--SCRIPS JavsScript-->
+    <script defer src="js/control-Inputs.js"></script>
     <script defer src="js/dom.js"></script>
     <script defer src="js/objeto.js"></script>
     <script defer src="js/variables.js"></script>
@@ -21,7 +21,7 @@
 <body>
     <!-- Titulo -->
     <div id="titulo">
-      <h1>Desafio entregable JSON y DOM</h1>
+      <h1>Segunda entrega Proyecto Finall</h1>
     </div>
     <br><br>
     <!--            Esto fue creado en dom.js
@@ -32,46 +32,43 @@
     <div id="formDatos">
         <div class="input-group mb-3">
             <span class="input-group" id="datosForm">Nombre</span>
-            <input type="text" id="nombre" class="form-control" placeholder="Ingrese su nombre">
+            <input type="text" id="nombre" class="form-control" placeholder="Ingrese su nombre (Presione ENTER para ver)">
         </div>
         <div class="input-group mb-3">
             <span class="input-group" id="datosForm">Email</span>
-            <input type="email" id="email" class="form-control" placeholder="Ejemplo@gmail.com">
+            <input type="email" id="email" class="form-control" placeholder="Ejemplo@gmail.com (Presione ENTER para ver)">
         </div>
         <button type="button" id="enviarDatos" class="btn btn-success">Enviar</button>
     </div>
     <br><br><br>
 
-    <!-- Tabla con lista de servicios -->
-    <table class="table table-responsive">
-        <thead>
+    <!-- Tabla con lista de servicios Web-->
+    <form id="formWebs">
+        <table class="table table-responsive">
+          <thead>
             <tr>
-                <th>Servicio</th>
-                <th>Precio</th>
+              <th>Servicio</th>
+              <th>Precio</th>
             </tr>
-        </thead>
-        <tbody>
-            <form id="formWebs">
+          </thead>
+            <tbody>
+    
                 <tr id="porfolio">
                     <td>
-                        <div class="form-check"> 
-                            <input class="form-check-input" type="radio" name="servicio" id="radios1" value="option1">
-                            <label class="form-check-label" for="radios1">
-                            Porfolio
-                            </label>
+                        <div class="form-check">
+                            <input class="form-check-input input" type="radio" name="porfolio" id="radios1" value="2300">
+                            <label class="form-check-label" for="radios1"> Porfolio </label>
                         </div>
                     </td>
-                    <td>
-                        $2300
+                    <td> 
+                        $2300 
                     </td>
                 </tr>
-                <tr  id="eCommerce">
+                <tr id="eCommerce">
                     <td>
-                        <div class="form-check"> 
-                            <input class="form-check-input" type="radio" name="servicio" id="radios2" value="option2">
-                            <label class="form-check-label" for="radios2">
-                                Diseño web de eCommerce
-                            </label>
+                        <div class="form-check">
+                            <input class="form-check-input input" type="radio" name="ecommerce" id="radios2" value="2500">
+                            <label class="form-check-label" for="radios2"> Diseño web de eCommerce </label>
                         </div>
                     </td>
                     <td>
@@ -80,11 +77,9 @@
                 </tr>
                 <tr id="cotizador">
                     <td>
-                        <div class="form-check"> 
-                            <input class="form-check-input" type="radio" name="servicio" id="radios3" value="option3">
-                            <label class="form-check-label" for="radios3">
-                                Diseño web de cotizador de productos o servicios
-                            </label>
+                        <div class="form-check">
+                            <input class="form-check-input input" type="radio"  name="servicios" id="radios3" value="2700">
+                            <label class="form-check-label" for="radios3"> Diseño web de cotizador de productos o servicios </label>
                         </div>
                     </td>
                     <td>
@@ -94,10 +89,8 @@
                 <tr id="corporativo">
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="servicio" id="radios4" value="option4">
-                            <label class="form-check-label" for="radios4">
-                            Diseño web corporativo
-                            </label>
+                            <input class="form-check-input input" type="radio" name="corporativo" id="radios4" value="3000">
+                            <label class="form-check-label" for="radios4"> Diseño web corporativo </label>
                         </div>
                     </td>
                     <td>
@@ -107,10 +100,8 @@
                 <tr id="institucional">
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="servicio" id="radios5" value="option5">
-                            <label class="form-check-label" for="radios5">
-                            Diseño web de tipo institucional
-                            </label>
+                            <input class="form-check-input input" type="radio" name="institucional" id="radios5" value="3300">
+                            <label class="form-check-label" for="radios5"> Diseño web de tipo institucional </label>
                         </div>
                     </td>
                     <td>
@@ -120,32 +111,34 @@
                 <tr id="viajes">
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="servicio" id="radios6" value="option6">
-                            <label class="form-check-label" for="radios6">
-                            Diseño web viajes/turismo
-                            </label>
+                            <input class="form-check-input input" type="radio" name="viajes" id="radios6" value="4600">
+                            <label class="form-check-label" for="radios6"> Diseño web viajes/turismo </label>
                         </div>
                     </td>
                     <td>
                         $4600
                     </td>
                 </tr>
-            </form>
-        </tbody>
-   </table>
-   <br><br>
-   <div class="form-check form-switch"> 
-        <input class="form-check-input" type="checkbox" id="switchMantenimiento">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Mantenimiento <b>$1890</b></label>
-    </div>
-   <br><br>
-   <input id="nuSeccioes" type="number" placeholder="N. de Secciones" min="1" max="100">
-   <br><br>
-   <button type="submit" id="confirmar"  class="btn btn-primary mb-2" onclick="cotizar()">Confirmar</button>
-   <br><br><br>
+            </tbody>
+        </table>
+        <br><br> <!-- SALTO DE LINEA -->
+                                                <!-- INPUT CON VALOR DE MANTENIMIENTO -->
+        <div class="form-check form-switch">
+          <input class="form-check-input input" type="checkbox" id="switchMantenimiento" name="mantenimiento" value="1890">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Mantenimiento <b>$1890</b></label>
+        </div>
+        
+        <br><br> <!-- SALTO DE LINEA -->
+                                                <!-- INPUT CON NUMERO DE SECCIONES -->
+        <input class="input" id="nuSeccioes" type="number" name="secciones" placeholder="N. de Secciones" min="1" max="100">
 
-   <div id="precioFinal">
+        <br><br> <!-- SALTO DE LINEA -->
+                                                <!-- SUBMIT PARA COTIZAR -->
+        <button type="submit" id="confirmar" onsubmit='handleSubmit' class="btn btn-primary mb-2">Confirmar</button>
+        <br><br><br>
+    </form>
+    <div id="precioFinal">
         <h3>Precio total de la Web <b id="totalWeb"> $ 0 </b></h3>
-   </div>
+    </div>
 </body>
 </html>

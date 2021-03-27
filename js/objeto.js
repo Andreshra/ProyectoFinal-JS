@@ -6,7 +6,6 @@ let servicio1 = document.getElementById("radios1"),
   servicio6 = document.getElementById("radios6")
   confirmar = document.getElementById("confirmar");
 
-  // ESTE ARCHIVO LO REEMPLAZARÉ POR objetoCotizador.js
   
 //                                                Objetos
 
