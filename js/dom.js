@@ -1,5 +1,5 @@
 //Añadiendo texto mediante JavaScript
-const titulo = document.getElementById("titulo")
+/* const titulo = document.getElementById("titulo")
 
 function construirDOM(elemento, ubicacion) {
     ubicacion.appendChild(elemento)
@@ -8,7 +8,7 @@ function construirDOM(elemento, ubicacion) {
 const tituloDom = document.createElement("p");
     tituloDom.innerText = "Bienvenido a nuestro cotizador de servicios Web.";
     tituloDom.classList.add("fst-italic")
-    construirDOM(tituloDom, titulo)
+    construirDOM(tituloDom, titulo) */
 
     // Formulario de datos
 
@@ -35,7 +35,7 @@ email.addEventListener("keyup", () => {color1(event)})
 
 function color (e) {
     if (e.key == "Enter" ) {
-        nombre.style.backgroundColor = "#32FF32"
+        nombre.style.backgroundColor = "#9AD9FF"
         console.log("OK :)")
         email.focus()
     }  
@@ -43,7 +43,7 @@ function color (e) {
 
 function color1 (e) {
     if (e.key == "Enter") {
-        email.style.backgroundColor = "#32FF32"
+        email.style.backgroundColor = "#9AD9FF"
         console.log("Second OK")
         enviarDatos.style.backgroundColor = "#0d6efd"
         enviarDatos.focus()
