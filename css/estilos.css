@@ -148,16 +148,16 @@ footer, #textoFooter {
   } 
 
   /*MEDIA QUERIES */
-
+/*Extra Small */
   @media (max-width: 575.98px) { 
       #tituloLogo {
-            font-size: 40px;
+            font-size: 35px;
         }
       .menu li {
         margin: 0px 15px;
         }
         .nav-link {
-            font-size: 18px;
+            font-size: 14px;
         }
         .justify-content-around {
             display:block !important;
@@ -167,6 +167,22 @@ footer, #textoFooter {
 
 /*Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) { 
+    #tituloLogo {
+        font-size: 40px;
+    }
+    .menu li {
+        margin: 0px 15px;
+    }
+    .nav-link {
+        font-size: 16px;
+    }
+    .justify-content-around {
+        display:block !important;
+        text-align: center;
+    } 
+ }
+/*Medium */
+ @media (max-width: 991.98px) { 
     #tituloLogo {
         font-size: 45px;
     }
@@ -179,5 +195,5 @@ footer, #textoFooter {
     .justify-content-around {
         display:block !important;
         text-align: center;
-    }
- }
+    } 
+}
