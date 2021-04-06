@@ -9,7 +9,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Links de fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- Link de CSS -->
     <link rel="stylesheet" href="css/estilos.css">
     <!--CDN jQuery--> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -23,19 +27,48 @@
     <script defer src="js/cotizador.js"></script>
 </head>
 <body>
-    <header class="container-fluid" id="TOP">
-        <p>LOGO/NOMBRE</p>
+    <!-- HEADER Y NAV -->
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-xs-12">       <!-- TITULO DE HEADER -->
+                <div class="d-flex justify-content-center">
+                    <h1 id="tituloLogo"> Cotizador Web </h1>
+                    <!-- <p class="tituloHeader">Cotizador Web</p> -->
+                </div>
+                <ul class="menu nav justify-content-center" data-animation="center">         <!-- NAV -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"> Inicio </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Nosotros </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#"> Contacto </a>
+                    </li class="nav-item">
+                </ul>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+                    <li >
+                      <a class="nav-link" href="#">Contacto</a>
+                    </li> -->
+            </div>
+        </div>
     </header>
+
     <!-- Titulo -->
-    <div class="container-fluid" id="titulo">
-      <h1>Segunda entrega Proyecto Final</h1>
-    </div>
-    <br><br>
-    <!--            Esto fue creado en dom.js-->
-    <div class="container-fluid">
-        <h2>Bienvenido a nuestro cotizador de servicios Web.</h2> 
-        <p>Con esta herramienta podras calcular cuanto el precio de tu sitio web en pocos minutos.</p>
-        <br>
+    <div class="container-fluid containerTitulo">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <h2 id="titulo">Bienvenido a nuestro cotizador de servicios Web.</h2> 
+                <p id="txtBienvenida">Con esta herramienta podras calcular el precio de tu sitio web en pocos minutos.</p>
+            </div>
+            <div class="col-2"></div>
+        </div>
     </div>
                 <!-- lista con instrucciones -->
     <div class="container-fluid d-flex justify-content-center">
@@ -60,7 +93,7 @@
                     <span class="input-group" id="datosForm">Email</span>
                     <input type="email" id="email" class="form-control" placeholder="Ejemplo@gmail.com (Presione ENTER para ver)">
                 </div>
-                <button type="button" id="enviarDatos" class="btn btn-success">Enviar</button>
+                <button type="button" id="enviarDatos" class="btn btn-outline-primary">Enviar</button>
             </div>
             <div class="col-2"></div>
         </div>
@@ -84,7 +117,7 @@
                             <tr id="porfolio">
                                 <td>
                                     <div class="form-check">
-                                        <input class="form-check-input input" type="radio" name="porfolio" id="radios1" value="2300">
+                                        <input class="form-check-input input" type="radio" name="servicios" id="radios1" value="2300">
                                         <label class="form-check-label" for="radios1"> Porfolio </label>
                                     </div>
                                 </td>
@@ -95,7 +128,7 @@
                             <tr id="eCommerce">
                                 <td>
                                     <div class="form-check">
-                                        <input class="form-check-input input" type="radio" name="ecommerce" id="radios2" value="2500">
+                                        <input class="form-check-input input" type="radio" name="servicios" id="radios2" value="2500">
                                         <label class="form-check-label" for="radios2"> Diseño web de eCommerce </label>
                                     </div>
                                 </td>
@@ -117,7 +150,7 @@
                             <tr id="corporativo">
                                 <td>
                                     <div class="form-check">
-                                        <input class="form-check-input input" type="radio" name="corporativo" id="radios4" value="3000">
+                                        <input class="form-check-input input" type="radio" name="servicios" id="radios4" value="3000">
                                         <label class="form-check-label" for="radios4"> Diseño web corporativo </label>
                                     </div>
                                 </td>
@@ -128,7 +161,7 @@
                             <tr id="institucional">
                                 <td>
                                     <div class="form-check">
-                                        <input class="form-check-input input" type="radio" name="institucional" id="radios5" value="3300">
+                                        <input class="form-check-input input" type="radio" name="servicios" id="radios5" value="3300">
                                         <label class="form-check-label" for="radios5"> Diseño web de tipo institucional </label>
                                     </div>
                                 </td>
@@ -139,7 +172,7 @@
                             <tr id="viajes">
                                 <td>
                                     <div class="form-check">
-                                        <input class="form-check-input input" type="radio" name="viajes" id="radios6" value="4600">
+                                        <input class="form-check-input input" type="radio" name="servicios" id="radios6" value="4600">
                                         <label class="form-check-label" for="radios6"> Diseño web viajes/turismo </label>
                                     </div>
                                 </td>
@@ -164,7 +197,9 @@
             
                     <br><br> <!-- SALTO DE LINEA -->
                                                             <!-- SUBMIT PARA COTIZAR -->
-                    <button type="submit" id="confirmar" onsubmit='handleSubmit' class="btn btn-primary mb-2">Confirmar</button>
+                    <div class="container-fluid d-flex justify-content-center">
+                        <button type="submit" id="confirmar" onsubmit='handleSubmit' class="btn btn-primary mb-2">Confirmar</button>
+                    </div>
                     <br><br><br>
                 </form>
             </div>
@@ -173,11 +208,15 @@
     </div>
                     <!-- CONTAINER QUE MUESTRA EL PRECIO DEL SERVICIO -->
     <div class="container-fluid d-flex justify-content-center" id="precioFinal">
-        <h3>Precio total de la Web <b id="totalWeb"> $ 0 </b></h3>
+        <h3 id="textoPrecio">Precio total de la Web <b id="totalWeb"> $ 0</h3>
     </div>
     <!-- FOOTER -->
     <footer>
-        <p id="textoFooter">ALGO</p>
+        <div class="row">
+            <div class="col-md-12 copy">
+                <p id="copyright" class="text-center">&copy; Copyright 2021 - José Andrés Herrera.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

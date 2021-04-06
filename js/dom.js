@@ -45,7 +45,7 @@ function color1 (e) {
     if (e.key == "Enter") {
         email.style.backgroundColor = "#9AD9FF"
         console.log("Second OK")
-        enviarDatos.style.backgroundColor = "#0d6efd"
+        enviarDatos.style.borderColor = "#44B9FF"
         enviarDatos.focus()
     }
 }

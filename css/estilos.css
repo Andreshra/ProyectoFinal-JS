@@ -1,10 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
 header {
     background: linear-gradient(to left, #3a7bd5, #00d2ff);
 }
 
-h1, h2, h3 {
+#tituloLogo {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 90px;
+    padding: 20px 0px;
+    color: #fff;
+    letter-spacing: 5px;
+    font-weight:bold;
+    border-bottom: 1px solid #fff;
+}
+
+h1 {font-size: 3em;}
+
+@media screen and (max-width: 64em) {
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 50em) {
+h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 30em){
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+}
+
+.nav-link {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.tituloHeader {
+    margin: 18px 0px;
+    color: #fff;
+}
+
+.containerTitulo {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
+    margin: 60px 0px;
+}
+
+#titulo {
+    border-bottom: 1px solid #00d2ff;
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(1.375rem + 1.5vw);
+}
+
+#txtBienvenida {
+    font-weight: normal;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 p {
@@ -34,7 +104,7 @@ ul > li > #textoLista {
     background-color: #B6B6B6;
 }
 
-#formDatos, #formWebs {
+#formDatos, #formWebs, #textoPrecio {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -44,7 +114,58 @@ ul > li > #textoLista {
     height: 40px;
 }
 
+#precioFinal {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
 footer, #textoFooter {
     background: linear-gradient(to left, #3a7bd5, #00d2ff);
     margin-bottom: 0px;
+    font-weight: normal;
 }
+
+#copyright {
+    font-size: 13px;
+    padding: 10px;
+    color: white; 
+}
+
+.row {
+        --bs-gutter-x: 0;
+}
+
+/* Efecto hover de NAV */
+.menu li {
+    margin-right: 70px;
+  }
+  
+  .menu a {
+    position: relative;
+    display: block;
+    padding: 5px;
+  }
+  
+  .menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #4a4a48, #2b2b28);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .menu a:hover::before {
+    transform: scaleX(1);
+  }
+
+  /* Animacion */
+
+  .menu[data-animation="center"] a::before {
+    transform-origin: center;
+  } 
