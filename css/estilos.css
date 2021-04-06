@@ -176,4 +176,8 @@ footer, #textoFooter {
     .nav-link {
         font-size: 18px;
     }
+    .justify-content-around {
+        display:block !important;
+        text-align: center;
+    }
  }
