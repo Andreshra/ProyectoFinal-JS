@@ -20,29 +20,6 @@ header {
     border-bottom: 1px solid #fff;
 }
 
-h1 {font-size: 3em;}
-
-@media screen and (max-width: 64em) {
-h1 {
-    font-size: 2.5em;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 50em) {
-h1 {
-    font-size: 2em;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 30em){
-h1 {
-    font-size: 1.5em;
-    text-align: center;
-  }
-}
-
 .nav-link {
     color: #fff;
     font-family: 'Roboto', sans-serif;
@@ -169,3 +146,34 @@ footer, #textoFooter {
   .menu[data-animation="center"] a::before {
     transform-origin: center;
   } 
+
+  /*MEDIA QUERIES */
+
+  @media (max-width: 575.98px) { 
+      #tituloLogo {
+            font-size: 40px;
+        }
+      .menu li {
+        margin: 0px 15px;
+        }
+        .nav-link {
+            font-size: 18px;
+        }
+        .justify-content-around {
+            display:block !important;
+            text-align: center;
+        }
+   }
+
+/*Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) { 
+    #tituloLogo {
+        font-size: 45px;
+    }
+    .menu li {
+        margin: 0px 15px;
+    }
+    .nav-link {
+        font-size: 18px;
+    }
+ }
