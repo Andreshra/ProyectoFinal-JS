@@ -182,7 +182,25 @@ footer, #textoFooter {
     } 
  }
 /*Medium */
- @media (max-width: 991.98px) { 
+
+@media (min-width: 768px) { 
+    #tituloLogo {
+        font-size: 45px;
+    }
+    .menu li {
+        margin: 0px 15px;
+    }
+    .nav-link {
+        font-size: 18px;
+    }
+    .justify-content-around {
+        display:block !important;
+        text-align: center;
+    } 
+}
+
+
+@media (max-width: 991.98px) { 
     #tituloLogo {
         font-size: 45px;
     }
