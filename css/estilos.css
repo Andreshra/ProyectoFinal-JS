@@ -177,7 +177,7 @@ footer, #textoFooter {
         font-size: 16px;
     }
     .justify-content-around {
-        display:block !important;
+        display:block;
         text-align: center;
     } 
  }
@@ -194,7 +194,7 @@ footer, #textoFooter {
         font-size: 18px;
     }
     .justify-content-around {
-        display:block !important;
+        display:block;
         text-align: center;
     } 
 }
@@ -211,7 +211,32 @@ footer, #textoFooter {
         font-size: 18px;
     }
     .justify-content-around {
-        display:block !important;
+        display:block;
         text-align: center;
     } 
 }
+
+/* Large devices */
+@media (min-width: 992px) { 
+    #tituloLogo {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 90px;
+        padding: 20px 0px;
+        color: #fff;
+        letter-spacing: 5px;
+        font-weight:bold;
+    }
+    #divSec-Mant {
+        justify-content: space-around;
+    }
+    .nav-link {
+        font-size: 25px;
+    }
+}
+
+/* X-Large devices */
+@media (min-width: 1200px) { 
+    #divSec-Mant {
+        justify-content: space-around;
+    }
+ }
