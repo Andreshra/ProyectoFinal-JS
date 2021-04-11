@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Final</title>
+    <title>Cotizador Web | Proyecto Final JavaScript</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
@@ -68,7 +68,7 @@
             <li><p id="textoLista">Seleccione el tipo de Web que desea cotizar.</li></p>
             <li><p id="textoLista">Obtén tu presupuesto.</li></p>
         </ul>
-    </div> <br><br>
+    </div>
     
 
     <!-- Formulario de datos del usuario -->
@@ -84,12 +84,13 @@
                     <span class="input-group" id="datosForm">Email</span>
                     <input type="email" id="email" class="form-control" placeholder="Ejemplo@gmail.com (Presione ENTER para ver)">
                 </div>
-                <button type="button" id="enviarDatos" class="btn btn-outline-primary">Enviar</button>
+                <div id="divBotonEnviarForm" class="d-flex justify-content-around">
+                    <button type="button" id="enviarDatos" class="btn btn-outline-primary">Enviar</button>
+                </div>
             </div>
             <div class="col-2"></div>
         </div>
     </div>
-    <br><br><br>
 
     <!-- Tabla con lista de servicios Web-->
     <div id="containerTable" class="container-fluid">
@@ -173,25 +174,21 @@
                             </tr>
                         </tbody>
                     </table>
-                    <br> <!-- SALTO DE LINEA -->
+
                     <div id="divSec-Mant" class="d-flex justify-content-around">
-                                                                <!-- INPUT CON N. DE SECCIONES -->
+                                                            <!-- INPUT CON N. DE SECCIONES -->
                         <input class="input" id="nuSecciones" type="number" name="secciones" placeholder="N. de Secciones" min="1" max="50">
-                        <br><br><br> <!-- SALTO DE LINEA -->
                                                             <!-- INPUT CON VALOR DE MANTENIMIENTO -->
                         <div class="form-check form-switch">
                             <input class="form-check-input input" type="checkbox" id="switchMantenimiento" name="mantenimiento" value="1890">
                             <label class="form-check-label" for="flexSwitchCheckDefault">Mantenimiento <b>$1890</b></label>
                         </div>
                     </div>
-                    
-            
-                    <br><br> <!-- SALTO DE LINEA -->
+
                                                             <!-- SUBMIT PARA COTIZAR -->
                     <div class="container-fluid d-flex justify-content-center">
                         <button type="submit" id="confirmar" onsubmit='handleSubmit' class="btn btn-primary mb-2">Confirmar</button>
                     </div>
-                    <br><br><br>
                 </form>
             </div>
             <div class="col-2"></div>

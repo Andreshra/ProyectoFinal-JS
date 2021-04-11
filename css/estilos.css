@@ -70,10 +70,20 @@ ul > li > #textoLista {
     margin: 0px;
 }
 
+#txtCampoVacio {
+    color: red;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    font-size: 19px;
+    padding: 8px;
+}
+
 .textoJq {
     color: #3a7bd5;
-    font-size: 20px;
-    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    font-size: 19px;
+    padding: 8px;
 }
 
 .btn-success, .btn-success:hover {
@@ -81,8 +91,12 @@ ul > li > #textoLista {
     background-color: #B6B6B6;
 }
 
-#formDatos, #formWebs, #textoPrecio {
-    font-family: 'Roboto', sans-serif;
+#formDatos, #formWebs {
+    margin: 55px 0px;
+}
+
+#textoPrecio {
+    margin: 30px;
 }
 
 
@@ -163,6 +177,10 @@ footer, #textoFooter {
             display:block !important;
             text-align: center;
         }
+        .form-switch {
+            padding-left: 4.5em;
+            margin: 35px 0px;
+        }
    }
 
 /*Small devices (landscape phones, less than 768px)*/
@@ -180,6 +198,11 @@ footer, #textoFooter {
         display:block;
         text-align: center;
     } 
+    .form-switch {
+        padding-left: 2.5em;
+        margin: 0px;
+        padding: 10px;
+    }
  }
 /*Medium */
 
@@ -197,6 +220,11 @@ footer, #textoFooter {
         display:block;
         text-align: center;
     } 
+    .form-switch {
+        padding-left: 2.5em;
+        margin: 0px;
+        padding: 10px;
+    }
 }
 
 
@@ -214,6 +242,13 @@ footer, #textoFooter {
         display:block;
         text-align: center;
     } 
+    #divSec-Mant {
+        margin: 35px 0px;
+    }
+    .form-switch {
+        padding-left: 2.5em;
+        margin: 10px 15px;
+    }
 }
 
 /* Large devices */
@@ -228,9 +263,15 @@ footer, #textoFooter {
     }
     #divSec-Mant {
         justify-content: space-around;
+        margin: 50px 0px;
     }
     .nav-link {
         font-size: 25px;
+    }
+    .form-switch {
+        padding-left: 2.5em;
+        margin: 0px;
+        padding: 10px;
     }
 }
 
@@ -238,5 +279,10 @@ footer, #textoFooter {
 @media (min-width: 1200px) { 
     #divSec-Mant {
         justify-content: space-around;
+    }
+    .form-switch {
+        padding-left: 2.5em;
+        margin: 0px;
+        padding: 10px;
     }
  }

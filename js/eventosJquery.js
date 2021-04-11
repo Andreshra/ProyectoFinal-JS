@@ -3,16 +3,17 @@ $(document).ready(function() {
 
 
     $("#enviarDatos") .click ( () => {
-        let divFormDatos = $("#formDatos")
+        let divFormDatos = $("#divBotonEnviarForm")
         if ($("#nombre").val() === "" && $("#email").val() === "") {
-            divFormDatos.append ('<div class="mx-auto" style="width: 200px; color: red;"> <h4> Campos vacios.</h4> </div>')
+            divFormDatos.append ('<h4 id="txtCampoVacio"> Campos vacios.</h4>')
+            $("#txtCampoVacio").fadeOut(3000)
             console.log("No se cargó ningún dato.")
             return false
         } else { 
-            divFormDatos.append ('<div class="mx-auto" style="width: 200px;"> <h4 class="textoJq" > Se han cargado los datos correctamente.</h4> </div>')
+            divFormDatos.append ('<h4 class="textoJq"> Se han cargado los datos correctamente.</h4>')
+            $(".textoJq").fadeOut(3000)
             console.log("Datos cargados en LocalStorage")
-        }
-        
+        } 
     })
 
 });

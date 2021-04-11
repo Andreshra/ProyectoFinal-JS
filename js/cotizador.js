@@ -27,6 +27,7 @@ const handleSubmit = e => {
       alert("Por favor, seleccione un servicio");
       console.log ("Total en 0, ya que no se seleccionó ningún servicio.")
     } else {
+      $("#totalWeb").css({ "color": "#00d2ff"});
       console.log("Its checked :)")
     }
 };
