@@ -1,15 +1,3 @@
-//Añadiendo texto mediante JavaScript
-/* const titulo = document.getElementById("titulo")
-
-function construirDOM(elemento, ubicacion) {
-    ubicacion.appendChild(elemento)
-}
-
-const tituloDom = document.createElement("p");
-    tituloDom.innerText = "Bienvenido a nuestro cotizador de servicios Web.";
-    tituloDom.classList.add("fst-italic")
-    construirDOM(tituloDom, titulo) */
-
     // Formulario de datos
 
 const nombre = document.getElementById("nombre")
@@ -24,6 +12,7 @@ function cargarDatos() {
 
     localStorage.setItem('Nombre', nombre.value)
     localStorage.setItem('email', email.value)
+
 }
 
 enviarDatos.onclick = cargarDatos
