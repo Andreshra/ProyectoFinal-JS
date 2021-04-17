@@ -33,5 +33,17 @@
         "id": "radios6",
         "descripcion": "Viajes/Turismo",
         "precio": 4600
+    },
+    {
+        "idTr": "deportes",
+        "id": "radios7",
+        "descripcion": "Deportes",
+        "precio": 1200
+    },
+    {
+        "idTr": "noticias",
+        "id": "radios8",
+        "descripcion": "Noticias",
+        "precio": 4300
     }
 ]
