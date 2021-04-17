@@ -1,32 +1,37 @@
 [
-    {
+    {   "idTr": "porfolio",
         "id": "radios1",
-        "nombre": "Portfolio",
+        "descripcion": "Portfolio",
         "precio": 2300
     },
     {
+        "idTr": "eCommerce",
         "id": "radios2",
-        "nombre": "eCommerce",
+        "descripcion": "eCommerce",
         "precio": 2500
     },
     {
+        "idTr": "cotizador",
         "id": "radios3",
-        "nombre": "Cotizador de productos o servicios",
+        "descripcion": "Cotizador de productos o servicios",
         "precio": 2700
     },
     {
+        "idTr": "corporativo",
         "id": "radios4",
-        "nombre": "Corporativo",
+        "descripcion": "Corporativo",
         "precio": 3000
     },
     {
+        "idTr": "institucional",
         "id": "radios5",
-        "nombre": "Institucional",
+        "descripcion": "Institucional",
         "precio": 3300
     },
     {
+        "idTr": "viajes",
         "id": "radios6",
-        "nombre": "Viajes/Turismo",
+        "descripcion": "Viajes/Turismo",
         "precio": 4600
     }
 ]

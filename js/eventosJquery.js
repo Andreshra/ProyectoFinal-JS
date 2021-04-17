@@ -16,14 +16,27 @@ $(document).ready(function() {
         }
     )
     
-
     //Evento para obtener TOTAL DE SERVICIOS
-    
     $("#confirmar").click(function () {	 
-        let total = 0;
-        let mantenimiento = $('#switchMantenimiento:checked').val()
-        total = ($('input:radio:checked').val() + ( $('#nuSecciones').val() * precioSecciones) + $('#switchMantenimiento:checked').val());
+        //Creo variables para asegurarme que no me arroje NaN
+        let checkRadio = parseInt($('input:radio:checked').val()) || 0;
+        let nuSections = parseInt($('#nuSecciones').val()) || 1;
+        let priceSections = parseInt(precioSecciones) || 0; 
+        let switchCheck = parseInt($('#switchMantenimiento:checked').val()) || 0;
+        // Compruebo si se selecciono algún servicio
+        if (!checkRadio) {
+            nuSections = 0
+            alert("Por favor, seleccione un servicio");
+            console.log ("Total en 0, ya que no se seleccionó ningún servicio.")
+        } else {
+              $("#totalWeb").css({ "color": "#00d2ff"});
+              console.log("Its checked :)")
+            }
 
+        let total = 0;
+        
+        total = (checkRadio + (nuSections * priceSections) + switchCheck);
+        
         totalWeb.innerText = `$ ${total}`;
         });
 

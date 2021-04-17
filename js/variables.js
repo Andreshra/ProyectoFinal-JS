@@ -21,11 +21,11 @@ let servicio1 = document.getElementById("radios1"),
 let HTMLServices = ""
 
 const services = (web) => {
-  HTMLServices = `<tr id="porfolio">
+  HTMLServices = `<tr id="${web.idTr}">
                     <td>
                         <div class="form-check">
                             <input class="form-check-input input" type="radio" name="servicios" id="${web.id}" value="${web.precio}">
-                            <label class="form-check-label" for="${web.id}"> ${web.nombre} </label>
+                            <label class="form-check-label" for="${web.id}"> ${web.descripcion} </label>
                         </div>
                     </td>
                     <td> 
@@ -34,4 +34,3 @@ const services = (web) => {
                   </tr>`
   return HTMLServices
 }
-
