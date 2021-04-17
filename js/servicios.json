@@ -1,0 +1,32 @@
+[
+    {
+        "id": "radios1",
+        "nombre": "Portfolio",
+        "precio": 2300
+    },
+    {
+        "id": "radios2",
+        "nombre": "eCommerce",
+        "precio": 2500
+    },
+    {
+        "id": "radios3",
+        "nombre": "Cotizador de productos o servicios",
+        "precio": 2700
+    },
+    {
+        "id": "radios4",
+        "nombre": "Corporativo",
+        "precio": 3000
+    },
+    {
+        "id": "radios5",
+        "nombre": "Institucional",
+        "precio": 3300
+    },
+    {
+        "id": "radios6",
+        "nombre": "Viajes/Turismo",
+        "precio": 4600
+    }
+]

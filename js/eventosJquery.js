@@ -1,7 +1,33 @@
 $(document).ready(function() {
     console.log('DOM is ready!');
 
+    
+    // Obtener datos de un JSON
+    $.getJSON(
+        "js/servicios.json", (response, status) => {
+            if (status === "success") {
+                let content = response;
+                    for (let web of content) {
+                        $("#filasWeb").append(services(web))
+                    }
+            } else {
+                console.error("No se cargaron los servicios")
+            }
+        }
+    )
+    
 
+    //Evento para obtener TOTAL DE SERVICIOS
+    
+    $("#confirmar").click(function () {	 
+        let total = 0;
+        let mantenimiento = $('#switchMantenimiento:checked').val()
+        total = ($('input:radio:checked').val() + ( $('#nuSecciones').val() * precioSecciones) + $('#switchMantenimiento:checked').val());
+
+        totalWeb.innerText = `$ ${total}`;
+        });
+
+    // Validar formulario de datos
     $("#enviarDatos") .click ( () => {
         let divFormDatos = $("#divBotonEnviarForm")
         if($("#txtCampoVacio")) { $("#txtCampoVacio").remove(); }
