@@ -17,24 +17,17 @@ function cargarDatos() {
 
 enviarDatos.onclick = cargarDatos
 
-//      EVENTOS
 
-nombre.addEventListener("keyup", () => {color(event)})
-email.addEventListener("keyup", () => {color1(event)})
-
-function color (e) {
-    if (e.key == "Enter" ) {
-        nombre.style.backgroundColor = "#9AD9FF"
-        console.log("OK :)")
-        email.focus()
-    }  
-}
-
-function color1 (e) {
-    if (e.key == "Enter") {
-        email.style.backgroundColor = "#9AD9FF"
-        console.log("Second OK")
-        enviarDatos.style.borderColor = "#44B9FF"
-        enviarDatos.focus()
+// Boton Return to Top
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        
+        $('#return-to-top').fadeIn(200);    
+    } else {
+        $('#return-to-top').fadeOut(200);   
     }
-}
+});
+$('#return-to-top').click(function() {    
+    $('body,html').animate({
+        scrollTop : 0                      
+    }, 500);
+});

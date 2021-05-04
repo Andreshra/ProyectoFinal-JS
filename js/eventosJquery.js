@@ -23,22 +23,22 @@ $(document).ready(function() {
         let nuSections = parseInt($('#nuSecciones').val()) || 1;
         let priceSections = parseInt(precioSecciones) || 0; 
         let switchCheck = parseInt($('#switchMantenimiento:checked').val()) || 0;
+        // Operaciones para calcular total
+        let total = 0;
+        
+        total = (checkRadio + (nuSections * priceSections) + switchCheck);
         // Compruebo si se selecciono algún servicio
         if (!checkRadio) {
-            nuSections = 0
+            total = 0
             alert("Por favor, seleccione un servicio");
             console.log ("Total en 0, ya que no se seleccionó ningún servicio.")
         } else {
               $("#totalWeb").css({ "color": "#00d2ff"});
-              console.log("Its checked :)")
+              console.log(total); //Total en la consola
             }
 
-        let total = 0;
-        
-        total = (checkRadio + (nuSections * priceSections) + switchCheck);
-        
-        totalWeb.innerText = `$ ${total}`;
-        });
+        totalWeb.innerText = `$ ${total}`; // Muestro el total en el DOM
+        }); 
 
     // Validar formulario de datos
     $("#enviarDatos") .click ( () => {

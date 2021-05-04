@@ -7,6 +7,8 @@
     <title>Cotizador Web | Proyecto Final JavaScript</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- CDN Iconos BS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,7 +22,6 @@
     <!--SCRIPS JavsScript-->
     <!-- <script defer src="js/objeto.js"></script> -->
     <script defer src="js/variables.js"></script>
-    <script defer src="js/valores.js"></script>
     <script defer src="js/control-Inputs.js"></script>
     <script defer src="js/ajax.js"></script>
     <script defer src="js/dom.js"></script>
@@ -78,11 +79,11 @@
             <div class="col-8">
                 <div class="input-group mb-3">
                     <span class="input-group" id="datosForm">Nombre</span>
-                    <input type="text" id="nombre" class="form-control" placeholder="Ingrese su nombre (Presione ENTER para ver)">
+                    <input type="text" id="nombre" class="form-control" placeholder="Ingrese su nombre">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group" id="datosForm">Email</span>
-                    <input type="email" id="email" class="form-control" placeholder="Ejemplo@gmail.com (Presione ENTER para ver)">
+                    <input type="email" id="email" class="form-control" placeholder="Ejemplo@gmail.com">
                 </div>
                 <div id="divBotonEnviarForm" class="d-flex justify-content-around">
                     <button type="button" id="enviarDatos" class="btn btn-outline-primary">Enviar</button>
@@ -106,72 +107,7 @@
                         </tr>
                       </thead>
                         <tbody id="filasWeb">
-                            <!-- <tr id="porfolio">
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input input" type="radio" name="servicios" id="radios1" value="2300">
-                                        <label class="form-check-label" for="radios1"> Portfolio </label>
-                                    </div>
-                                </td>
-                                <td> 
-                                    $2300 
-                                </td>
-                            </tr>
-                            <tr id="eCommerce">
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input input" type="radio" name="servicios" id="radios2" value="2500">
-                                        <label class="form-check-label" for="radios2"> eCommerce </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    $2500
-                                </td>
-                            </tr>
-                            <tr id="cotizador">
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input input" type="radio"  name="servicios" id="radios3" value="2700">
-                                        <label class="form-check-label" for="radios3"> Cotizador de productos o servicios </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    $2700
-                                </td>
-                            </tr>
-                            <tr id="corporativo">
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input input" type="radio" name="servicios" id="radios4" value="3000">
-                                        <label class="form-check-label" for="radios4"> Corporativo </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    $3000
-                                </td>
-                            </tr>
-                            <tr id="institucional">
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input input" type="radio" name="servicios" id="radios5" value="3300">
-                                        <label class="form-check-label" for="radios5"> Institucional </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    $3300
-                                </td>
-                            </tr>
-                            <tr id="viajes">
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input input" type="radio" name="servicios" id="radios6" value="4600">
-                                        <label class="form-check-label" for="radios6"> Viajes/turismo </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    $4600
-                                </td>
-                            </tr> -->
+
                         </tbody>
                     </table>
 
@@ -198,6 +134,8 @@
     <div class="container-fluid d-flex justify-content-center" id="precioFinal">
         <h3 id="textoPrecio">Precio total de la Web <b id="totalWeb"> $ 0</h3>
     </div>
+    <!-- Boton Boton Return to Top -->
+    <a id="return-to-top"><i class="bi bi-chevron-up"></i></a>
     <!-- FOOTER -->
     <footer>
         <div class="row">

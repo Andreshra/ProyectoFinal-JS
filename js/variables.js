@@ -9,6 +9,9 @@ let inputValues = {
   secciones: 1,
 };
 
+const precioSecciones = 500; //Valor de cada seccion
+const valorMantenimiento = 1890; // Valor de mantenimiento de la Web
+
 let servicio1 = document.getElementById("radios1"),
     servicio2 = document.getElementById("radios2"),
     servicio3 = document.getElementById("radios3"), 
@@ -17,7 +20,7 @@ let servicio1 = document.getElementById("radios1"),
     servicio6 = document.getElementById("radios6"),
     confirmar = document.getElementById("confirmar");
 
-//Variables para obtener JSON
+//Obtener JSON
 let HTMLServices = ""
 
 const services = (web) => {
